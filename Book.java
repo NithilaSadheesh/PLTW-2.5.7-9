@@ -2,6 +2,7 @@
  * Activity 2.5.7
  *
  * A Book class for the MediaLibrary program
+* @ authors - Nithila Sadheesh, Paige Nothelfer, Sanjitha Saravanan
  */
 public class Book
 {
@@ -15,6 +16,7 @@ public class Book
     title = t;
     author = a;
     rating = 0;
+    // System.out.println("Adding book " + t);
   }
 
    /*** Accessor methods ***/
@@ -41,11 +43,17 @@ public class Book
   }
 
   public void adjustRating(int r) {
+    System.out.println("Adjusting rating by " + r);
     if(r <= 10 && r >= 0) {
       rating = r;
     }
   }
-
+/**
+  public String getInfo()
+  {
+     return "The current book information is " + info;
+  }
+*/
   /*** Mutator methods ***/
   public void setTitle(String t) {
     title = t;
@@ -56,6 +64,7 @@ public class Book
   }
 
   public boolean equals(Book b) {
+    // System.out.println("Checking book " + t);
     return((this.title).equals(b.getTitle()) && (this.author).equals(b.getAuthor()));
   }
 }

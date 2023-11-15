@@ -4,17 +4,15 @@
  * A Book class for the MediaLibrary program
  * @ authors - Nithila Sadheesh, Paige Nothelfer, Sanjitha Saravanan
  */
-public class Movie
+public class Song
 {
   private String title;
-  private double duration;
   private int rating;
 
   /*** Constructor ****/
-  public Movie(String t, double d)
+  public Song(String t)
   {
     title = t;
-    duration = d;
     rating = 0;
   }
 
@@ -23,17 +21,13 @@ public class Movie
     return title;
   }
 
-  public double getDuration() {
-    return duration;
-  }
-
   public int getRating() {
     return rating;
   }
 
   public String toString() 
   {
-    String info = "\"" + title + "\", with duration of  " + duration;
+    String info = "\"" + title + "\"";
     if (rating != 0) 
     { 
       info += ", rating is " + rating;
@@ -52,11 +46,8 @@ public class Movie
     title = t;
   }
 
-  public void setDuration(double d) {
-    duration = d;
-  }
 
-  public boolean equals(Movie b) {
-    return((this.title).equals(b.getTitle()) && (this.duration == b.getDuration()));
+  public boolean equals(Song s) {
+    return((this.title).equals(s.getTitle()) && (this.rating == s.getRating()));
   }
 }

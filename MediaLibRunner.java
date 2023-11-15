@@ -2,6 +2,7 @@
  * Activity 2.5.7
  * 
  * The runner for the MediaLibrary program
+* @ authors - Nithila Sadheesh, Paige Nothelfer, Sanjitha Saravanan
  */
 public class MediaLibRunner
 {
@@ -27,6 +28,8 @@ public class MediaLibRunner
     /*
      * Activity 2.5.7
      */
+
+    /*
     System.out.println("You have a NEW Library");
     MediaLib myLib2 = new MediaLib();
 
@@ -40,6 +43,7 @@ public class MediaLibRunner
     myLib2.testBook(newBook);
     System.out.println("after test:" + newBook);*/
 
+    /*
     Book newBook2 = new Book("To Kill a Mockingbird", "Lee");
     System.out.println(newBook2.equals(newBook)); 
     // System.out.println(newBook.title.equals(newBook2.title)); 
@@ -52,6 +56,22 @@ public class MediaLibRunner
     myLib2.addMovie(newMovie2);
     System.out.println(myLib2);
     System.out.println(newMovie1.equals(newMovie2));
+*/
+
+    /*
+     * Activity 2.5.8
+     */
+
+    // Steps 16+17
+    MediaLib library1 = new MediaLib();
+    Book newBook = new Book("To Kill a Mockingbird", "Lee");
+    library1.addBook(newBook);
+    MediaLib library2 = new MediaLib();
+    Movie newMovie = new Movie("The Matrix", 1.6);
+    library2.addMovie(newMovie);
+    MediaLib.getNumEntries();
+
+    
     
   }
 }
